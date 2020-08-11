@@ -1,0 +1,41 @@
+{{#each this}}
+  <div class="details">
+      <img
+        src="{{img}}"
+        alt="{{text}}"
+        class="details__img"
+      ></img>
+      <div class="details__information">
+        <h2 class="details__titile">A Fistfull of lead</h2>
+        <ul class="details__list">
+          <li class="details__item">
+            <p class="details__name">Vote / Votes</p>
+            <p class="details__data details__scores">
+              <span class="details__rating details__rating--orange">{{rating}}</span> /
+              <span class="details__rating">{{rating}}</span>
+            </p>
+          </li>
+          <li class="details__item">
+            <p class="details__name">Popularity</p>
+            <p class="details__data">{{popularity}}</p>
+          </li>
+          <li class="details__item">
+            <p class="details__name">Original title</p>
+            <p class="details__data details__data--upper">{{title}}</p>
+          </li>
+          <li class="details__item">
+            <p class="details__name">Genre</p>
+            <p class="details__data">{{genre}}</p>
+          </li>
+        </ul>
+        <h3 class="details__about">About</h3>
+        <p class="details__text">
+         {{text}}
+        </p>
+        <div class="details__box">
+          <button class="details__btn">Add to watched</button>
+          <button class="details__btn">Add to queue</button>
+        </div>
+      </div>
+    </div>
+{{/each}}
