@@ -1,55 +1,54 @@
 {
-  "name": "goit-js20-teamwork",
-  "version": "1.1.0",
-  "description": "GoIT JS-20 Project",
+  "name": "goit-js20-project",
+  "version": "1.0.0",
+  "description": "boilerplate",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server --env.mode development --config ./webpack/config.js",
-    "build": "webpack --env.mode production --config ./webpack/config.js",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack --mode production",
+    "start": "webpack-dev-server --mode development"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/luxplanjay/webpack-starter-kit.git"
-  },
-  "keywords": [],
-  "author": "Alexander Repeta <alexander.repeta@gmail.com>",
+  "author": "Yaroslav Kuzero",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/luxplanjay/webpack-starter-kit/issues"
-  },
-  "homepage": "https://github.com/luxplanjay/webpack-starter-kit#readme",
   "devDependencies": {
     "@babel/core": "^7.11.1",
-    "@babel/plugin-proposal-class-properties": "^7.10.4",
     "@babel/preset-env": "^7.11.0",
-    "autoprefixer": "^9.8.6",
+    "axios": "^0.19.2",
     "babel-loader": "^8.1.0",
     "clean-webpack-plugin": "^3.0.0",
-    "css-loader": "^3.6.0",
+    "css-loader": "^4.2.1",
+    "eslint": "^7.6.0",
     "file-loader": "^6.0.0",
-    "friendly-errors-webpack-plugin": "^1.7.0",
-    "gh-pages": "^2.2.0",
+    "handlebars": "^4.7.6",
     "handlebars-loader": "^1.7.1",
-    "html-loader": "^0.5.5",
-    "html-webpack-plugin": "^3.2.0",
-    "img-loader": "^3.0.1",
-    "mini-css-extract-plugin": "^0.9.0",
-    "node-sass": "^4.14.1",
+    "html-webpack-plugin": "^4.3.0",
+    "imagemin-webpack-plugin": "^2.4.2",
+    "mini-css-extract-plugin": "^0.10.0",
+    "mini-svg-data-uri": "^1.2.3",
     "optimize-css-assets-webpack-plugin": "^5.0.3",
-    "postcss-loader": "^3.0.0",
-    "sass-loader": "^8.0.2",
+    "sass": "^1.26.10",
+    "sass-loader": "^9.0.3",
     "style-loader": "^1.2.1",
+    "throttle-debounce": "^2.2.1",
     "url-loader": "^4.1.0",
     "webpack": "^4.44.1",
     "webpack-cli": "^3.3.12",
-    "webpack-dev-server": "^3.11.0",
-    "webpack-merge": "^4.2.2",
-    "webpackbar": "^4.0.0"
+    "webpack-dev-server": "^3.11.0"
   },
   "dependencies": {
-    "core-js": "^3.6.5",
-    "handlebars": "^4.7.6"
-  }
+    "friendly-errors-webpack-plugin": "^1.7.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MaxaKozin/goit-js20-teamwork.git"
+  },
+  "keywords": [
+    "GoIT",
+    "JS20",
+    "project"
+  ],
+  "bugs": {
+    "url": "https://github.com/MaxaKozin/goit-js20-teamwork/issues"
+  },
+  "homepage": "https://github.com/MaxaKozin/goit-js20-teamwork#readme"
 }
