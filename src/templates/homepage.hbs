@@ -1,15 +1,16 @@
  {{#each this}}
     <li class="movie-card">
       <a href="#" class="movie-link">
-        <div>
-          <img class="movie-image" src="{{poster_path}}" alt="{{title}}" />
+          {{!-- <img class="movie-img" src="{{poster_path}}" alt="{{title}}" /> --}}
+          <div class="movie-img"></div>
           <p class="movie-name">{{title}}</p>
-          <p>
+          <div class="movie__box">
+          <p class="movie-details">
             {{#each genre_ids}}
-            <span class="movie-genre">{{this}}</span>
+            <span class="movie-details">{{this}}</span>
             {{/each}}
           </p>
-          <p class="movie-date">{{release_date}}</p>
+          <p class="movie-details"> / {{release_date}}</p>
         </div>
       </a>
     </li>

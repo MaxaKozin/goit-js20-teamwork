@@ -5,7 +5,33 @@
     <title>GoIT JS-20 Project team 2</title>
     <meta name="viewport" content="width=device-width,initial-scale=1" />
   </head>
+  <link
+    rel="stylesheet"
+    href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+    crossorigin="anonymous"
+  />
+  <link
+    href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    rel="stylesheet"
+  />
   <body>
     <h1>This is JS20 Project</h1>
+    <form class="form search-form">
+      <div class="">
+        <input
+          type="text"
+          class=""
+          name="query"
+          id="searchQuery"
+          placeholder="Поиск фильмов"
+          autocomplete="off"
+        />
+      </div>
+      <button type="submit" class="">
+        <span class="">Search</span>
+      </button>
+    </form>
+    <ul class="movie js-articles"></ul>
   </body>
 </html>
