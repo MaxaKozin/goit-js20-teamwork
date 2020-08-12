@@ -36,7 +36,8 @@
     "webpack-dev-server": "^3.11.0"
   },
   "dependencies": {
-    "friendly-errors-webpack-plugin": "^1.7.0"
+    "friendly-errors-webpack-plugin": "^1.7.0",
+    "spin.js": "^4.1.0"
   },
   "repository": {
     "type": "git",
