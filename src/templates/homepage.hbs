@@ -1,8 +1,7 @@
  {{#each this}}
     <li class="movie-card">
-      <a href="#" class="movie-link">
-          {{!-- <img class="movie-img" src="{{poster_path}}" alt="{{title}}" /> --}}
-          <div class="movie-img"></div>
+      <a href="{{id}}" class="movie-link">
+          <img class="movie-img" src="https://image.tmdb.org/t/p/original{{poster_path}}" alt="{{title}}" data-id={{id}}/>
           <p class="movie-name">{{title}}</p>
           <div class="movie__box">
           <p class="movie-details">
