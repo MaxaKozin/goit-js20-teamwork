@@ -22,9 +22,7 @@ const MyLibrary = {
 
   init() {
     const form = document.querySelector('.search-form');
-    // const pagination = document.querySelector('.pagination__wrapper');
     form.classList.add('none');
-    // pagination.innerHTML = '';
 
     const buttonBox = document.querySelector('.js-buttons');
     buttonBox.innerHTML = '';

@@ -1,16 +1,16 @@
- {{#each this}}
-    <li class="movie-card">
-      <a href="{{id}}" class="movie-link">
-          <img class="movie-img" src="https://image.tmdb.org/t/p/original{{poster_path}}" alt="{{title}}" data-id={{id}}/>
-          <p class="movie-name">{{title}}</p>
-          <div class="movie__box">
-          <p class="movie-details">
-            {{#each genre_ids}}
-            <span class="movie-details">{{this}}</span>
-            {{/each}}
-          </p>
-          <p class="movie-details"> / {{release_date}}</p>
-        </div>
-      </a>
-    </li>
-  {{/each }}
+{{#each this}}
+<div class="movie-card">
+  <div class="movie-link">
+    <img class="movie-img" src="https://image.tmdb.org/t/p/original{{poster_path}}" alt="{{title}}" data-id={{id}} />
+    <p class="movie-name">{{title}}</p>
+    <div class="movie__box">
+      <p class="movie-details">
+        {{#each genre_ids}}
+        <span class="movie-details">{{this}}</span>
+        {{/each}}
+      </p>
+      <p class="movie-details"> / {{release_date}}</p>
+    </div>
+  </div>
+</div>
+{{/each }}

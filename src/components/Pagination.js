@@ -33,7 +33,7 @@ const Pagination = {
       }
 
       const loadContent = (currentPage) => {
-        document.querySelector('#content').innerHTML = '';
+        document.querySelector('.movie').innerHTML = '';
         onPaginationClick(currentPage);
       }
 
