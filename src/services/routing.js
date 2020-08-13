@@ -1,6 +1,7 @@
 import * as apiServices from "./apiService";
 import homePageMarkUp from "../views/HomePage";
 import MyLibrary from '../views/MyLibraryView';
+import Pagination from "../components/Pagination";
 
 const routing = (page) => {
   const selectTab = id => {
@@ -20,12 +21,15 @@ const routing = (page) => {
   }
 
   const pushHomepage = (event, page) => {
+    Pagination.clear();
     let { id } = event.target;
     selectTab(id);
     loadHomepageContent(page);
+    Pagination.init();
   }
 
   const loadLibraryContent = () => {
+    Pagination.clear();
     MyLibrary.init()
   }
 

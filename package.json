@@ -37,6 +37,7 @@
   },
   "dependencies": {
     "friendly-errors-webpack-plugin": "^1.7.0",
+    "pagination": "github:mayuska/pagination",
     "spin.js": "^4.1.0"
   },
   "repository": {

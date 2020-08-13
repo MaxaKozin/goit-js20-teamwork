@@ -1,0 +1,28 @@
+.pagination__wrapper {
+  display: flex;
+  width: 300px;
+  margin: 0 auto;
+  justify-content: center;
+}
+.arrowLeft {
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.arrowRight {
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.pagNumber {
+  cursor: pointer;
+  margin-right: 6px;
+}
+
+.pagDots {
+  margin-right: 6px;
+}
+
+.current {
+  background-color: orange;
+}
