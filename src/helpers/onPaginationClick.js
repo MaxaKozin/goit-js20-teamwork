@@ -1,5 +1,4 @@
 import * as apiServices from '../services/apiService';
-import refs from '../services/refs';
 import homePageMarkUp from '../views/HomePage';
 
 const onPaginationClick = (page) => {
