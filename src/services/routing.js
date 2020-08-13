@@ -1,6 +1,6 @@
 import * as apiServices from "./apiService";
 import homePageMarkUp from "../views/HomePage";
-import detailsPageMarkUp from '../views/MovieDetailsPage'
+import MyLibrary from '../views/MyLibraryView';
 
 const routing = (page) => {
   const selectTab = id => {
@@ -24,13 +24,20 @@ const routing = (page) => {
     selectTab(id);
     loadHomepageContent(page);
   }
-  // const loadLibraryContent = () => {
-  //   const content = document.querySelector('#content');
-  //   homePageMarkUp(data, content)
-  // }
+
+  const loadLibraryContent = () => {
+    MyLibrary.init()
+  }
+
+  const pushLibrary = event => {
+    let { id } = event.target;
+    selectTab(id);
+    loadLibraryContent();
+  }
+
   window.onload = () => {
     window["home"].addEventListener('click', event => pushHomepage(event, page));
-    // window["mylibrary"].addEventListener('click', event => push(event));
+    window["mylibrary"].addEventListener('click', event => pushLibrary(event));
   }
 }
 
