@@ -27,6 +27,7 @@ refs.searchForm.addEventListener("submit", (event) => {
     .then((data) => homePageMarkUp(data, refs.gallery))
     .catch((error) => console.log(error));
   refs.gallery.innerHTML = "";
+  Pagination.clear();
   form.reset();
 });
 
