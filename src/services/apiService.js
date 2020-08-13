@@ -4,6 +4,11 @@ axios.defaults.baseURL = "https://api.themoviedb.org/3";
 
 const apiKey = "4858d21346699d14f09ede89415e4aeb";
 
+export const fetchRatedData = () => {
+  return axios
+    .get(`/trending/movie/day?api_key=${apiKey}`).then(({ data }) => data)
+}
+
 export const fetchRated = (page) => {
   return axios
     .get(`/trending/movie/day?api_key=${apiKey}&page=${page}`)

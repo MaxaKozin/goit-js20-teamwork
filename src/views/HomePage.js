@@ -1,5 +1,5 @@
 import homepage from '../templates/homepage.hbs';
-
+import Pagination from '../components/Pagination';
 
 const homePageMarkUp = function (data, ref) {
   const markUp = homepage(data);
