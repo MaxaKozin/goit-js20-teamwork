@@ -1,11 +1,11 @@
 .movie {
   width: 280px;
   list-style-type: none;
-  margin: 0;
+  margin: 0 auto 50px;
   padding: 0;
-  margin: auto;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+
 }
 
 .movie-link {
