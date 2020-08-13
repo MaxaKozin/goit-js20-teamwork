@@ -3,6 +3,7 @@ import homePageMarkUp from "./views/HomePage";
 import detailsPageMarkUp from './views/MovieDetailsPage'
 import refs from "./services/refs";
 import routing from './services/routing';
+import onPaginationClick from './helpers/onPaginationClick';
 import "./style.scss";
 
 // apiServices.fetchRated(1).then(console.log);
