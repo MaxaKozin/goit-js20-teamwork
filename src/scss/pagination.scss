@@ -22,7 +22,6 @@
   cursor: pointer;
   margin-right: 15px;
   line-height: 1px;
- 
 }
 
 .pagDots {
@@ -34,7 +33,7 @@
 
 .current {
   display: inline;
-  background-color: orange;
+  background-color: $highlighter;
   margin-right: 15px;
   padding-left: 15px;
   padding-right: 15px;
@@ -44,7 +43,7 @@
 }
 
 @media (max-width: 768px) {
-  .pagDots{
+  .pagDots {
     display: none;
   }
 }

@@ -1,4 +1,3 @@
-
 const genres = [
   {
     "id": 28,

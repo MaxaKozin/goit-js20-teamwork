@@ -1,18 +1,19 @@
 import homepage from '../templates/homepage.hbs';
+import refs from '../services/refs';
 
 const MyLibrary = {
   getWatched() {
     console.log('getting watched');
     const data = JSON.stringify(localStorage.getItem('watched')) || [];
-    document.querySelector('#content').innerHTML = '';
-    this.myLibraryMarkUp(data, document.querySelector('#content'))
+    refs.content.innerHTML = '';
+    this.myLibraryMarkUp(data, refs.content)
   },
 
   getQueue() {
     console.log('gettin queue');
     const data = JSON.stringify(localStorage.getItem('queue')) || [];
-    document.querySelector('#content').innerHTML = '';
-    this.myLibraryMarkUp(data, document.querySelector('#content'))
+    refs.content.innerHTML = '';
+    this.myLibraryMarkUp(data, refs.content)
   },
 
   myLibraryMarkUp(data, ref) {
@@ -21,11 +22,8 @@ const MyLibrary = {
   },
 
   init() {
-    const form = document.querySelector('.search-form');
-    form.classList.add('none');
-
-    const buttonBox = document.querySelector('.js-buttons');
-    buttonBox.innerHTML = '';
+    refs.searchForm.classList.add('none');
+    refs.buttonBox.innerHTML = '';
 
     const watchedButton = document.createElement('button');
     watchedButton.type = 'button';
@@ -49,15 +47,11 @@ const MyLibrary = {
     })
 
     const buttonsMarkup = [watchedButton, queueButton];
-    buttonBox.append(...buttonsMarkup);
+    refs.buttonBox.append(...buttonsMarkup);
 
     this.getWatched();
 
   }
 }
-
-
-
-
 
 export default MyLibrary;

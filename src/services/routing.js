@@ -4,28 +4,23 @@ import MyLibrary from '../views/MyLibraryView';
 import Pagination from "../components/Pagination";
 import clickListener from "../helpers/clickListener";
 import { startSpin, stopSpin } from '../components/Spinner/Spinner';
+import refs from '../services/refs';
 
 const routing = (page) => {
   const selectTab = id => {
-    document.querySelectorAll('.route').forEach(item => item.classList.remove('selected'));
+    refs.routes.forEach(item => item.classList.remove('selected'));
     document.querySelectorAll('#' + id).forEach(item => item.classList.add('selected'));
   }
 
   const loadHomepageContent = (page = 1) => {
-    if (document.querySelector('.form__alert')) {
-      document.querySelector('.form__alert').innerHTML = '';
-    }
+    refs.warning.textContent = '';
     startSpin();
     apiServices
       .fetchRated(page)
       .then((data) => {
-        const content = document.querySelector('#content');
-        content.innerHTML = '';
-        const movieRef = document.createElement('div');
-        movieRef.className = 'movie';
-        content.append(movieRef);
-        homePageMarkUp(data, movieRef);
-        clickListener(movieRef);
+        refs.content.innerHTML = '';
+        homePageMarkUp(data, refs.content);
+        clickListener(refs.content);
       })
       .then(() => stopSpin())
       .catch((error) => console.log(error));
@@ -46,6 +41,7 @@ const routing = (page) => {
   }
 
   const pushLibrary = event => {
+    refs.warning.textContent = '';
     let { id } = event.target;
     startSpin();
     selectTab(id);

@@ -1,16 +1,17 @@
 import * as apiServices from '../services/apiService';
 import detailsPageMarkUp from '../views/MovieDetailsPage';
+import refs from '../services/refs';
 
-const content = document.querySelector('#content');
 const clickListener = () => {
-  const ref = document.querySelector('.movie');
-  ref.addEventListener('click', (event) => {
+  const movie = document.querySelector(".movie");
+  movie.addEventListener('click', (event) => {
     event.preventDefault();
+    refs.warning.textContent = '';
     const { id } = event.target.dataset;
     apiServices.fetchById(Number(id)).then((data) => {
-      content.innerHTML = '';
-      detailsPageMarkUp(data, content);
-      document.querySelectorAll('.route').forEach(item => item.classList.remove('selected'));
+      refs.content.innerHTML = '';
+      detailsPageMarkUp(data, refs.content);
+      refs.routes.forEach(item => item.classList.remove('selected'));
     }
     )
   })

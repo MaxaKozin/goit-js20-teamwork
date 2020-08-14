@@ -1,4 +1,4 @@
-  <div class="details">
+  <div class="details" data-id={{id}}>
       <img
         src="https://image.tmdb.org/t/p/original{{poster_path}}"
         alt="{{title}}"
@@ -34,8 +34,8 @@
          {{overview}}
         </p>
         <div class="details__box">
-          <button class="details__btn">Add to watched</button>
-          <button class="details__btn">Add to queue</button>
+          <button type='button' class="details__btn">Add to watched</button>
+          <button type='button' class="details__btn">Add to queue</button>
         </div>
       </div>
     </div>

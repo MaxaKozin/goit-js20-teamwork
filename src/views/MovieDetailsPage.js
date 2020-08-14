@@ -1,12 +1,12 @@
 import details from '../templates/details.hbs';
 import Pagination from '../components/Pagination';
+import refs from '../services/refs'
 
-const detailsPageMarkUp = function (data, ref) {
+const detailsPageMarkUp = function (data, target) {
   const markUp = details(data);
-  const form = document.querySelector('.search-form');
-  form.classList.add('none');
+  refs.searchForm.classList.add('none');
   Pagination.clear();
-  ref.insertAdjacentHTML('beforeend', markUp);
+  target.insertAdjacentHTML('beforeend', markUp);
 };
 
 export default detailsPageMarkUp;
