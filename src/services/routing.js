@@ -3,6 +3,7 @@ import homePageMarkUp from "../views/HomePage";
 import MyLibrary from '../views/MyLibraryView';
 import Pagination from "../components/Pagination";
 import clickListener from "../helpers/clickListener";
+import { startSpin, stopSpin } from '../components/Spinner/Spinner';
 
 const routing = (page) => {
   const selectTab = id => {
@@ -11,6 +12,10 @@ const routing = (page) => {
   }
 
   const loadHomepageContent = (page = 1) => {
+    if (document.querySelector('.form__alert')) {
+      document.querySelector('.form__alert').innerHTML = '';
+    }
+    startSpin();
     apiServices
       .fetchRated(page)
       .then((data) => {
@@ -22,6 +27,7 @@ const routing = (page) => {
         homePageMarkUp(data, movieRef);
         clickListener(movieRef);
       })
+      .then(() => stopSpin())
       .catch((error) => console.log(error));
   }
 
@@ -35,11 +41,13 @@ const routing = (page) => {
 
   const loadLibraryContent = () => {
     Pagination.clear();
-    MyLibrary.init()
+    MyLibrary.init();
+    stopSpin();
   }
 
   const pushLibrary = event => {
     let { id } = event.target;
+    startSpin();
     selectTab(id);
     loadLibraryContent();
   }

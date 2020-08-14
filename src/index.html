@@ -23,24 +23,24 @@
         <div id="mylibrary" class="route">My Library</div>
       </nav>
       <form class="form search-form">
-        <div class="">
+        <div class="input__wrapper">
           <input
             type="text"
-            class=""
+            class="form__input"
             name="query"
             id="searchQuery"
             placeholder="Поиск фильмов"
             autocomplete="off"
           />
+          <button type="submit" class="form__button">
+            <span class="form__search"></span>
+          </button>
         </div>
-        <button type="submit" class="">
-          <span class="">Search</span>
-        </button>
       </form>
     </header>
 
     <div class="js-buttons"></div>
-
+    <div id="spin"></div>
     <div id="content" class="movies js-articles"></div>
     <div class="pagination"></div>
   </body>
