@@ -23,17 +23,19 @@ const opts = {
 };
 
 
+const target = document.querySelector('#spin'); // find the parent element for spinner
 
-const spinner = (target) => new Spinner(opts).spin(target);
+const spinner = new Spinner(opts);
+const startSpin = () => spinner.spin(target);
+const stopSpin = () => spinner.stop();
 
-export default spinner;
+export { startSpin, stopSpin };
 
 
 // Usage
 
 // import spinner from './components/Spinner/Spinner'; // import component
 
-// const target = document.querySelector('#spin'); // find the parent element for spinner
 
 // spinner(target)  // to start spinner
 
