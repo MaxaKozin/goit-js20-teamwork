@@ -1,12 +1,6 @@
 import onLoading from './helpers/onLoading';
 import "./style.scss";
-import clickListener from "./helpers/clickListener";
 import onFormSubmit from "./helpers/onFormSubmit";
-import createMovieContainer from "./helpers/createMovieContainer";
-
-
-// Создание базового контейнера для размещения карточек фильмов
-createMovieContainer();
 
 // Запрос для Homepage
 onLoading();
@@ -15,4 +9,4 @@ onLoading();
 onFormSubmit();
 
 // Создание слушателя на контейнер с карточками фильмов
-clickListener();
+

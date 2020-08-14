@@ -1,8 +1,8 @@
 import homepage from '../templates/homepage.hbs';
 import genresIds from '../services/genresIds';
+import refs from '../services/refs';
 
-const homePageMarkUp = function (data, ref) {
-
+const homePageMarkUp = function (data, target) {
   const newData = data.map((item => {
     const newGenres = []
     item.genre_ids.map(id => {
@@ -14,14 +14,11 @@ const homePageMarkUp = function (data, ref) {
     return item
   }
   ))
-  ref.innerHTML = '';
+  target.innerHTML = '';
   const markUp = homepage(newData);
-
-  const buttonBox = document.querySelector('.js-buttons');
-  buttonBox.innerHTML = '';
-  const form = document.querySelector('.search-form');
-  form.classList.remove('none');
-  ref.innerHTML = markUp;
+  refs.buttonBox.innerHTML = '';
+  refs.searchForm.classList.remove('none');
+  target.innerHTML = markUp;
 };
 
 export default homePageMarkUp;

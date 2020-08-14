@@ -1,12 +1,16 @@
-.form {
-  // display: flex;
-  // align-items: center;
+// .form {
+//   // display: flex;
+//   // align-items: center;
+
+//   // border-radius: 3px;
+
+// }
+.search-form {
+  border-bottom: 1px solid #000;
   width: 100%;
   max-width: 400px;
   background-color: #fff;
-  // border-radius: 3px;
   overflow: hidden;
-  border-bottom: 1px solid #000;
 }
 .input__wrapper {
   display: flex;
@@ -37,9 +41,9 @@
   outline: none;
 }
 
-.form__alert {
-  position: absolute;
+.form__warning {
+  width: 100%;
+  height: 48px;
+  text-align: center;
   color: red;
-  top: 150px;
-  left: 35%;
 }

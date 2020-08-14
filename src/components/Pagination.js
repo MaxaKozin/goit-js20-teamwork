@@ -1,6 +1,7 @@
 import pagination from 'pagination';
 import onPaginationClick from '../helpers/onPaginationClick';
 import * as apiServices from '../services/apiService';
+import refs from '../services/refs';
 
 const Pagination = {
   items: null,
@@ -21,8 +22,7 @@ const Pagination = {
     <a class="material-icons">arrow_forward</a>`;
       paginationWrapper.innerHTML = htmlMarkup;
       paginationWrapper.classList.add('pagination__wrapper');
-      const pagRef = document.querySelector('.pagination');
-      pagRef.append(paginationWrapper);
+      refs.pagination.append(paginationWrapper);
 
       const options = {
         currentPage: 1,
@@ -33,7 +33,6 @@ const Pagination = {
       }
 
       const loadContent = (currentPage) => {
-        document.querySelector('.movie').innerHTML = '';
         onPaginationClick(currentPage);
       }
 
@@ -44,7 +43,7 @@ const Pagination = {
   },
 
   clear() {
-    document.querySelector('.pagination').innerHTML = '';
+    refs.pagination.innerHTML = '';
   }
 }
 

@@ -1,5 +1,6 @@
+<ul class="movie">
 {{#each this}}
-<div class="movie-card">
+<li class="movie-card">
   <div class="movie-link">
     <img class="movie-img" src="https://image.tmdb.org/t/p/original{{poster_path}}" alt="{{title}}" data-id={{id}} />
     <p class="movie-name">{{title}}</p>
@@ -12,5 +13,6 @@
       <p class="movie-details"> / {{release_date}}</p>
     </div>
   </div>
-</div>
+</li>
 {{/each }}
+</ul>

@@ -3,6 +3,7 @@ import * as apiServices from '../services/apiService';
 import homePageMarkUp from '../views/HomePage';
 import Pagination from '../components/Pagination';
 import { startSpin, stopSpin } from '../components/Spinner/Spinner';
+import clickListener from './clickListener';
 
 const onFormSubmit = () => {
   refs.searchForm.addEventListener("submit", (event) => {
@@ -10,27 +11,20 @@ const onFormSubmit = () => {
     const form = event.currentTarget;
     const inputValue = form.elements.query.value;
     if (!inputValue) {
-      if (document.querySelector('.form__alert')) {
-        document.querySelector('.form__alert').innerHTML = 'Empty Query';
-        return;
-      }
-
-      const alert = document.createElement('p');
-      alert.className = 'form__alert';
-      alert.innerHTML = 'Empty query';
-      refs.searchForm.append(alert);
+      refs.warning.textContent = 'EMPTY QUERY';
       return;
-
     }
+
+
+
     if (inputValue) {
-      // document.querySelector('.form__alert').innerHTML = '';
-      const movie = document.querySelector('.movie');
-      movie.innerHTML = '';
+      refs.warning.textContent = '';
+      refs.content.innerHTML = '';
       startSpin();
       apiServices
         .fetchByQuery(inputValue, 1)
-        .then((data) => homePageMarkUp(data, movie))
-        .then(() => stopSpin())
+        .then((data) => homePageMarkUp(data, refs.content))
+        .then(() => stopSpin()).then(() => clickListener())
         .catch((error) => console.log(error));
       Pagination.clear();
       form.reset();
