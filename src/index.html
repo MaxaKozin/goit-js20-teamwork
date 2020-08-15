@@ -16,9 +16,11 @@
     rel="stylesheet"
   />
   <body>
-    <header id="header">
+    <header id="header" class="home">
       <nav class="page__nav">
-        <h1 class="logo">Filmoteka</h1>
+        <a class="home-link" target="_blank" href=""
+          ><h1 class="logo">Filmoteka</h1></a
+        >
         <div id="home" class="route">Home</div>
         <div id="mylibrary" class="route">My Library</div>
       </nav>
@@ -40,9 +42,9 @@
         </form>
         <div class="form__warning"></div>
       </div>
+      <div class="js-buttons"></div>
     </header>
 
-    <div class="js-buttons"></div>
     <div id="spin"></div>
     <div id="content" class="movies js-articles"></div>
     <div class="pagination"></div>
