@@ -1,0 +1,49 @@
+.pagination__wrapper {
+  display: flex;
+  width: 300px;
+  min-height: 40px;
+  margin: 0 auto;
+  justify-content: center;
+  line-height: 40px;
+  margin-bottom: 60px;
+  font-family: "Roboto Medium";
+}
+.arrowLeft {
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.arrowRight {
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.pagNumber {
+  cursor: pointer;
+  margin-right: 15px;
+  line-height: 1px;
+}
+
+.pagDots {
+  display: inline;
+  line-height: 10px;
+  vertical-align: 50%;
+  margin-right: 15px;
+}
+
+.current {
+  display: inline;
+  background-color: $highlighter;
+  margin-right: 15px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 5px;
+}
+
+@media (max-width: 768px) {
+  .pagDots {
+    display: none;
+  }
+}

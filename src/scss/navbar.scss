@@ -1,6 +1,8 @@
 #header {
   width: 100%;
   height: 200px;
+  background: none;
+  position: relative;
 }
 
 .page__nav {
@@ -19,7 +21,18 @@
 }
 
 .selected {
-  color: blue;
+  color: blue; // need to be changed
+  position: relative;
+
+  &::after {
+    display: block;
+    content: "";
+    position: absolute;
+    background-color: $highlighter;
+    width: 100%;
+    height: 3px;
+    margin: 10px auto 0px;
+  }
 }
 
 #home {
@@ -29,6 +42,7 @@
 .form {
   margin: 0 auto;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }

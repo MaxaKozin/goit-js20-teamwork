@@ -22,26 +22,31 @@
         <div id="home" class="route">Home</div>
         <div id="mylibrary" class="route">My Library</div>
       </nav>
-      <form class="form search-form">
-        <div class="">
-          <input
-            type="text"
-            class=""
-            name="query"
-            id="searchQuery"
-            placeholder="Поиск фильмов"
-            autocomplete="off"
-          />
-        </div>
-        <button type="submit" class="">
-          <span class="">Search</span>
-        </button>
-      </form>
+      <div class="form">
+        <form class="search-form">
+          <div class="input__wrapper">
+            <input
+              type="text"
+              class="form__input"
+              name="query"
+              id="searchQuery"
+              placeholder="Поиск фильмов"
+              autocomplete="off"
+            />
+            <button type="submit" class="form__button">
+              <span class="form__search"></span>
+            </button>
+          </div>
+        </form>
+        <div class="form__warning"></div>
+      </div>
     </header>
 
     <div class="js-buttons"></div>
-
-    <ul id="content" class="movie js-articles"></ul>
+    <div id="spin"></div>
+    <div id="content" class="movies js-articles"></div>
+    <div class="pagination"></div>
+   
     <footer class="footer">
       <div class="footer__container">
         <p class="footer__text">
