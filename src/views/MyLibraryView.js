@@ -1,4 +1,4 @@
-import homepage from '../templates/homepage.hbs';
+import libraryPage from '../templates/library.hbs'
 import refs from '../services/refs';
 
 const MyLibrary = {
@@ -17,7 +17,7 @@ const MyLibrary = {
   },
 
   myLibraryMarkUp(data, ref) {
-    const markUp = homepage(data);
+    const markUp = libraryPage(data);
     ref.insertAdjacentHTML('beforeend', markUp);
   },
 
