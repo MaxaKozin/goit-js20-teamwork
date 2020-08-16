@@ -16,9 +16,16 @@
     rel="stylesheet"
   />
   <body>
-    <header id="header">
+    <header id="header" class="home">
       <nav class="page__nav">
-        <h1 class="logo">Filmoteka</h1>
+        <h1 class="logo">
+          <a
+            class="home-link"
+            target="_blank"
+            href="https://github.com/MaxaKozin/goit-js20-teamwork/graphs/contributors"
+            >Filmoteka</a
+          >
+        </h1>
         <div id="home" class="route">Home</div>
         <div id="mylibrary" class="route">My Library</div>
       </nav>
@@ -40,11 +47,32 @@
         </form>
         <div class="form__warning"></div>
       </div>
+      <div class="js-buttons"></div>
     </header>
 
-    <div class="js-buttons"></div>
     <div id="spin"></div>
-    <div id="content" class="movies js-articles"></div>
+    <div id="content"></div>
     <div class="pagination"></div>
+
+    <footer class="footer">
+      <div class="footer__container">
+        <p class="footer__text">
+          <svg class="copyright" width="16px" height="16px">
+            <use href="../src/images/copyright-24px.svg#copyright"></use>
+          </svg>
+          2020 | All Rights Reserved | Developed with
+          <svg class="footer__heart" width="16px" height="16px">
+            <use href="../src/images/favorite-heart-button.svg#heart"></use>
+          </svg>
+          by
+          <a
+            class="footer__link"
+            href="https://github.com/MaxaKozin/goit-js20-teamwork/graphs/contributors"
+            target="_blank"
+            >GoIT Students</a
+          >
+        </p>
+      </div>
+    </footer>
   </body>
 </html>

@@ -1,0 +1,20 @@
+.lbr-movie-card {
+  position: relative;
+}
+.overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: all 200ms linear;
+
+  .delete {
+    background-image: url(../images/delete-icon.svg);
+  }
+  :hover {
+    opacity: 1;
+  }
+}
