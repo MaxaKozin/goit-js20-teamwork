@@ -1,3 +1,7 @@
+#content {
+  padding-top: 20px;
+}
+
 .movie {
   width: 280px;
   list-style-type: none;
@@ -46,6 +50,10 @@
 }
 
 @media screen and (min-width: 768px) {
+  #content {
+    padding-top: 28px;
+  }
+
   .movie {
     width: 620px;
     display: grid;

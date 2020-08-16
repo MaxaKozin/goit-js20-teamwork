@@ -28,10 +28,6 @@
   padding: 46px 20px 14px;
 }
 
-.page__nav > a {
-  margin-right: auto;
-}
-
 .route {
   cursor: pointer;
   color: $header-txt;
@@ -71,7 +67,7 @@
 .logo {
   position: relative;
   font-size: 0;
-  text-decoration: none;
+  margin-right: auto;
 
   &::before {
     position: absolute;
@@ -87,6 +83,19 @@
     opacity: 0.6;
     transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
     outline: none;
+  }
+}
+
+.home-link {
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 30px;
+  line-height: 36px;
+  color: $header-txt;
+
+  &:hover {
+    text-decoration: none;
+    color: $header-txt;
   }
 }
 
@@ -120,9 +129,6 @@
     margin-right: 40px;
   }
   .logo {
-    font-size: 30px;
-    line-height: 36px;
-    color: $header-txt;
     padding-left: 50px;
     &::before {
       top: -5px;
@@ -142,7 +148,4 @@
     width: 140px;
     margin-right: 20px;
   }
-}
-
-@media (min-width: 1024px) {
 }
