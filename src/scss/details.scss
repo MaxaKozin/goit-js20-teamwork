@@ -117,6 +117,12 @@
   }
 }
 
+.details__btn--in-the-list {
+  background-color: green;
+  color: $btn-txt-hover;
+  border: 1px solid green;
+}
+
 @media screen and (min-width: 768px) {
   .details {
     display: flex;
