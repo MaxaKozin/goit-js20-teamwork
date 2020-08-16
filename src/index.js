@@ -1,4 +1,4 @@
-import onLoading from './helpers/onLoading';
+import onLoading from "./helpers/onLoading";
 import "./style.scss";
 import onFormSubmit from "./helpers/onFormSubmit";
 
@@ -9,4 +9,3 @@ onLoading();
 onFormSubmit();
 
 // Создание слушателя на контейнер с карточками фильмов
-
