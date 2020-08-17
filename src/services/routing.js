@@ -41,8 +41,8 @@ const routing = (page) => {
   const loadLibraryContent = () => {
     Pagination.clear();
     MyLibrary.init();
+    refs.header.className = "my-library";
     onDeleteClick();
-    refs.header.className = "my-library"; // me
     stopSpin();
   };
 
