@@ -6,25 +6,29 @@
 }
 
 .home {
-  background: url("./images/header_home_mobile.png"), linear-gradient($overlay, $overlay);
+  background: url("./images/header_home_mobile.png"),
+    linear-gradient($overlay, $overlay);
   background-size: cover;
   background-repeat: no-repeat;
 }
 
 .home-page {
-  background: url("./images/header_home_mobile.png"), linear-gradient($overlay, $overlay);
+  background: url("./images/header_home_mobile.png"),
+    linear-gradient($overlay, $overlay);
   background-size: cover;
   background-repeat: no-repeat;
 }
 
 .my-library {
-  background: url("./images/header_queue_watched_mobile.png"), linear-gradient($overlay, $overlay);
+  background: url("./images/header_queue_watched_mobile.png"),
+    linear-gradient($overlay, $overlay);
   background-size: cover;
   background-repeat: no-repeat;
 }
 
 .header-detalis {
-  background: url("./images/header_details_mobile.png"), linear-gradient($overlay, $overlay);
+  background: url("./images/header_details_mobile.png"),
+    linear-gradient($overlay, $overlay);
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -134,70 +138,79 @@
   }
 
   .home {
-    background: url("./images/header_home_tablet.png"), linear-gradient($overlay, $overlay);
+    background: url("./images/header_home_tablet.png"),
+      linear-gradient($overlay, $overlay);
     background-size: cover;
     background-repeat: no-repeat;
   }
   .home-page {
-    background: url("./images/header_home_tablet.png"), linear-gradient($overlay, $overlay);
+    background: url("./images/header_home_tablet.png"),
+      linear-gradient($overlay, $overlay);
     background-size: cover;
     background-repeat: no-repeat;
   }
 
   .my-library {
-    background: url("./images/header_queue_watched_tablet.png"), linear-gradient($overlay, $overlay);
+    background: url("./images/header_queue_watched_tablet.png"),
+      linear-gradient($overlay, $overlay);
     background-size: cover;
     background-repeat: no-repeat;
   }
 
   .header-detalis {
-    background: url("./images/header_details_tablet.png"), linear-gradient($overlay, $overlay);
+    background: url("./images/header_details_tablet.png"),
+      linear-gradient($overlay, $overlay);
     background-size: cover;
     background-repeat: no-repeat;
   }
   .logo {
     padding-left: 50px;
 
-  .home-link {
-    font-size: 30px;
-    line-height: 36px;
-    color: $header-txt;
-    padding-left: 40px;
+    .home-link {
+      font-size: 30px;
+      line-height: 36px;
+      color: $header-txt;
+      padding-left: 40px;
 
-    &::before {
-      top: -2px;
-      left: 0;
+      &::before {
+        top: -2px;
+        left: 0;
+      }
     }
-  }
-  .js-buttons {
-    justify-content: center;
-  }
-  .library__button {
-    width: 140px;
-    margin-right: 20px;
+    .js-buttons {
+      justify-content: center;
+    }
+    .library__button {
+      width: 140px;
+      margin-right: 20px;
+    }
   }
 }
 
 @media screen and (min-width: 1024px) {
   .home {
-    background: url("./images/header_home_desktop.png"), linear-gradient($overlay, $overlay);
+    background: url("./images/header_home_desktop.png"),
+      linear-gradient($overlay, $overlay);
     background-size: cover;
     background-repeat: no-repeat;
   }
   .home-page {
-    background: url("./images/header_home_desktop.png"), linear-gradient($overlay, $overlay);
+    background: url("./images/header_home_desktop.png"),
+      linear-gradient($overlay, $overlay);
     background-size: cover;
     background-repeat: no-repeat;
   }
 
   .my-library {
-    background: url("./images/header_queue_watched_desktop.png"), linear-gradient($overlay, $overlay);
+    background: url("./images/header_queue_watched_desktop.png"),
+      linear-gradient($overlay, $overlay);
     background-size: cover;
     background-repeat: no-repeat;
   }
 
   .header-detalis {
-    background: url("./images/header_details_desktop.png"), linear-gradient($overlay, $overlay);
+    background: url("./images/header_details_desktop.png"),
+      linear-gradient($overlay, $overlay);
     background-size: cover;
     background-repeat: no-repeat;
   }
