@@ -5,6 +5,7 @@ import Pagination from "../components/Pagination";
 import clickListener from "../helpers/clickListener";
 import { startSpin, stopSpin } from "../components/Spinner/Spinner";
 import refs from "../services/refs";
+import onDeleteClick from "../helpers/onDeleteClick";
 
 const routing = (page) => {
   const selectTab = (id) => {
@@ -40,6 +41,7 @@ const routing = (page) => {
   const loadLibraryContent = () => {
     Pagination.clear();
     MyLibrary.init();
+    onDeleteClick();
     refs.header.className = "my-library"; // me
     stopSpin();
   };

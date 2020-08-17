@@ -11,7 +11,7 @@ const onFormSubmit = () => {
     const form = event.currentTarget;
     const inputValue = form.elements.query.value;
     if (!inputValue) {
-      refs.warning.textContent = "EMPTY QUERY";
+      refs.warning.textContent = "Search result not successfull. Enter correct movie name and try again";
       return;
     }
 
@@ -21,10 +21,19 @@ const onFormSubmit = () => {
       startSpin();
       apiServices
         .fetchByQuery(inputValue, 1)
-        .then((data) => homePageMarkUp(data, refs.content))
+        .then((data) => {
+          if (data.length === 0) {
+            refs.warning.textContent = "Search result not successfull. Enter correct movie name and try again";
+            stopSpin();
+            throw new Error('Search result not successfull. Enter correct movie name and try again');
+          }
+          homePageMarkUp(data, refs.content)
+        })
         .then(() => stopSpin())
         .then(() => clickListener())
-        .catch((error) => console.log(error));
+        .catch((error) => {
+          console.log(error);
+        });
       Pagination.clear();
       form.reset();
     }
