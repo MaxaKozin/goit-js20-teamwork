@@ -1,7 +1,7 @@
 <ul class="library-movies">
-{{#each this}}
-<li class="lbr-movie-card">
-    <img class="movie__img" src="https://image.tmdb.org/t/p/original{{poster_path}}" alt="{{title}}" data-id={{id}} />
+  {{#each this}}
+  <li class="lbr-movie-card" data-id={{id}}>
+    <img class="movie__img" src="https://image.tmdb.org/t/p/original{{poster_path}}" alt="{{title}}" />
     <div class="lbr-movie__info">
       <p class="lbr-movie__name">{{title}}</p>
       <p class="lbr-movie__date"> / {{release_date}}</p>
@@ -23,6 +23,6 @@
     <div class="overlay">
       <button type="button" class="delete"></button>
     </div>
-</li>
-{{/each }}
+  </li>
+  {{/each }}
 </ul>
