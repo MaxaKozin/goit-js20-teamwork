@@ -1,16 +1,20 @@
   <div class="details" data-id={{id}}>
-      <img
+    <div class="details__img-container">
+        <img
         src="https://image.tmdb.org/t/p/original{{poster_path}}"
         alt="{{title}}"
         class="details__img"
       ></img>
-      <div class="details__information">
+    </div>
+     
+    <div class="details__information">
         <h2 class="details__titile">{{title}}</h2>
         <ul class="details__list">
           <li class="details__item">
             <p class="details__name">Vote / Votes</p>
             <p class="details__data details__scores">
-              <span class="details__rating details__rating--orange">{{vote_average}}</span> /
+              <span class="details__rating details__rating--orange">{{vote_average}}</span>
+              <span class="details__rating--solidus"> / </span>
               <span class="details__rating">{{vote_count}}</span>
             </p>
           </li>
@@ -24,9 +28,11 @@
           </li>
           <li class="details__item">
             <p class="details__name">Genre</p>
+            <p class="details__data">
             {{#each genres}}
-            <span class="details__data">{{this.name}}</span>
+            <span>{{this.name}}</span>
             {{/each}}
+            </p>
           </li>
         </ul>
         <h3 class="details__about">About</h3>
@@ -37,5 +43,5 @@
           <button type='button' class="details__btn js-btnWatched">Add to watched</button>
           <button type='button' class="details__btn js-btnQueue">Add to queue</button>
         </div>
-      </div>
     </div>
+  </div>
