@@ -1,10 +1,10 @@
 <ul class="library-movies">
-  {{#each this}}
-  <li class="lbr-movie-card" data-id={{id}}>
-    <img class="movie__img" src="https://image.tmdb.org/t/p/original{{poster_path}}" alt="{{title}}" />
+{{#each this}}
+<li class="lbr-movie-card" data-id={{id}} >
+    <img class="lbr-movie__img" src="https://image.tmdb.org/t/p/original{{poster_path}}" alt="{{title}}"/>
     <div class="lbr-movie__info">
-      <p class="lbr-movie__name">{{title}}</p>
-      <p class="lbr-movie__date"> / {{release_date}}</p>
+      <p class="lbr-movie__name">{{title}} </p>
+      <p class="lbr-movie__date"> | {{release_date}}</p>
       <p class="lbr-movie__scores">Vote / Votes</p>
       <p class="lbr-scores__data">
         <span class="scores__rating--orange">{{vote_average}}</span> /
@@ -12,9 +12,10 @@
       </p>
       <p class="lbr-details__name">Popularity</p>
       <p class="lbr-details__data">{{popularity}}</p>
-      <p class="lbr-movie__genres">
-        {{#each genre_ids}}
-        <span class="genres__item">{{this}}</span>
+      <p class="lbr-movie__genres">Genre</p>
+      <p class="movie__genres--list">
+        {{#each genres}}
+        <span class="genres__item">{{this.name}}</span>
         {{/each}}
       </p>
       <p class="lbr-movie__about">About</p>
