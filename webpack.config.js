@@ -6,6 +6,7 @@ const webpack = require("webpack");
 const FriendlyErrorsWebpackPlugin = require("friendly-errors-webpack-plugin");
 const OptimizeCssAssetsPlugin = require("optimize-css-assets-webpack-plugin");
 const svgToMiniDataURI = require("mini-svg-data-uri");
+const loader = require("sass-loader");
 const ImageminPlugin = require("imagemin-webpack-plugin").default;
 
 module.exports = () => {
@@ -22,14 +23,15 @@ module.exports = () => {
           use: [MiniCssExtractPlugin.loader, "css-loader", "sass-loader"],
         },
         {
-          test: /\.(png|jpg|gif)\$/i,
+          test: /\.(png|jpg|gif)$/i,
           use: [
             {
               loader: "url-loader",
               options: {
+                name: "[path][name].[ext]",
                 limit: 8192,
               },
-            },
+            }, 'img-loader'
           ],
         },
         {
