@@ -5,17 +5,17 @@ import onDeleteClick from '../helpers/onDeleteClick';
 
 const MyLibrary = {
   getWatched() {
-    console.log("getting watched");
     const data = JSON.parse(localStorage.getItem("watched")) || [];
     refs.content.innerHTML = "";
     this.myLibraryMarkUp(data, refs.content);
+    onDeleteClick();
   },
 
   getQueue() {
-    console.log("gettin queue");
     const data = JSON.parse(localStorage.getItem("queue")) || [];
     refs.content.innerHTML = "";
     this.myLibraryMarkUp(data, refs.content);
+    onDeleteClick();
   },
 
   myLibraryMarkUp(data, ref) {
@@ -40,7 +40,6 @@ const MyLibrary = {
       queueButton.classList.remove("library__button--active");
       watchedButton.classList.add("library__button--active");
       this.getWatched();
-      onDeleteClick();
     });
 
     const queueButton = document.createElement("button");
@@ -51,7 +50,6 @@ const MyLibrary = {
       watchedButton.classList.remove("library__button--active");
       queueButton.classList.add("library__button--active");
       this.getQueue();
-      onDeleteClick();
     });
 
     const buttonsMarkup = [watchedButton, queueButton];
