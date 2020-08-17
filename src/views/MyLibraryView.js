@@ -1,5 +1,6 @@
 import libraryPage from '../templates/library.hbs'
 import refs from '../services/refs';
+import onDeleteClick from '../helpers/onDeleteClick';
 
 
 const MyLibrary = {
@@ -35,6 +36,7 @@ const MyLibrary = {
       queueButton.classList.remove("library__button--active");
       watchedButton.classList.add("library__button--active");
       this.getWatched();
+      onDeleteClick();
     });
 
     const queueButton = document.createElement("button");
@@ -45,6 +47,7 @@ const MyLibrary = {
       watchedButton.classList.remove("library__button--active");
       queueButton.classList.add("library__button--active");
       this.getQueue();
+      onDeleteClick();
     });
 
     const buttonsMarkup = [watchedButton, queueButton];
