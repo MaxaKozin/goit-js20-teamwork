@@ -3,23 +3,30 @@
   height: auto;
   position: relative;
   padding-bottom: 50px;
-  background-image: url("./images/header_home_mobile.png");
 }
 
 .home {
-  background-color: black;
+  background: url("./images/header_home_mobile.png"), linear-gradient($overlay, $overlay);
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .home-page {
-  background-color: brown;
+  background: url("./images/header_home_mobile.png"), linear-gradient($overlay, $overlay);
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .my-library {
-  background-color: #d87093;
+  background: url("./images/header_queue_watched_mobile.png"), linear-gradient($overlay, $overlay);
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .header-detalis {
-  background-color: purple;
+  background: url("./images/header_details_mobile.png"), linear-gradient($overlay, $overlay);
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .page__nav {
@@ -121,12 +128,34 @@
   outline: none;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 767px) {
   .page__nav {
     padding: 46px 74px 20px;
   }
   #home {
     margin-right: 40px;
+  }
+  .home {
+    background: url("./images/header_home_tablet.png"), linear-gradient($overlay, $overlay);
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .home-page {
+    background: url("./images/header_home_tablet.png"), linear-gradient($overlay, $overlay);
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  .my-library {
+    background: url("./images/header_queue_watched_tablet.png"), linear-gradient($overlay, $overlay);
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  .header-detalis {
+    background: url("./images/header_details_tablet.png"), linear-gradient($overlay, $overlay);
+    background-size: cover;
+    background-repeat: no-repeat;
   }
   .logo {
     padding-left: 50px;
@@ -147,5 +176,30 @@
   .library__button {
     width: 140px;
     margin-right: 20px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .home {
+    background: url("./images/header_home_desktop.png"), linear-gradient($overlay, $overlay);
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .home-page {
+    background: url("./images/header_home_desktop.png"), linear-gradient($overlay, $overlay);
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  .my-library {
+    background: url("./images/header_queue_watched_desktop.png"), linear-gradient($overlay, $overlay);
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  .header-detalis {
+    background: url("./images/header_details_desktop.png"), linear-gradient($overlay, $overlay);
+    background-size: cover;
+    background-repeat: no-repeat;
   }
 }

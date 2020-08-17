@@ -18,7 +18,11 @@ const MyLibrary = {
   },
 
   myLibraryMarkUp(data, ref) {
-    const markUp = libraryPage(data);
+    const newData = data.map(item => {
+      item.release_date = item.release_date.slice(0, 4)
+      return item
+    });
+    const markUp = libraryPage(newData);
     ref.insertAdjacentHTML('beforeend', markUp);
   },
 
