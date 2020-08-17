@@ -1,10 +1,13 @@
   <div class="details" data-id={{id}}>
-      <img
+    <div class="details__img-container">
+        <img
         src="https://image.tmdb.org/t/p/original{{poster_path}}"
         alt="{{title}}"
         class="details__img"
       ></img>
-      <div class="details__information">
+    </div>
+     
+    <div class="details__information">
         <h2 class="details__titile">{{title}}</h2>
         <ul class="details__list">
           <li class="details__item">
@@ -37,5 +40,5 @@
           <button type='button' class="details__btn js-btnWatched">Add to watched</button>
           <button type='button' class="details__btn js-btnQueue">Add to queue</button>
         </div>
-      </div>
     </div>
+  </div>
