@@ -5,7 +5,7 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const webpack = require("webpack");
 const FriendlyErrorsWebpackPlugin = require("friendly-errors-webpack-plugin");
 const OptimizeCssAssetsPlugin = require("optimize-css-assets-webpack-plugin");
-const svgToMiniDataURI = require("mini-svg-data-uri");
+// const svgToMiniDataURI = require("mini-svg-data-uri");
 const ImageminPlugin = require("imagemin-webpack-plugin").default;
 
 module.exports = () => {
@@ -37,10 +37,20 @@ module.exports = () => {
           test: /\.(woff|woff2|eot|ttf|otf)$/,
           use: [
             {
-              loader: "url-loader",
+              loader: "file-loader",
+              options: {
+                name: "[path][name].[ext]"
+              },
+            },
+          ],
+        },
+        {
+          test: /\.(ico)$/,
+          use: [
+            {
+              loader: "file-loader",
               options: {
                 name: "[name].[ext]",
-                outputPath: "fonts/",
               },
             },
           ],
@@ -49,10 +59,10 @@ module.exports = () => {
           test: /\.svg$/i,
           use: [
             {
-              loader: "url-loader",
+              loader: "file-loader",
               options: {
-                generator: (content) => svgToMiniDataURI(content.toString()),
-              },
+                name: "[path][name].[ext]"
+              }
             },
           ],
         },
@@ -69,7 +79,7 @@ module.exports = () => {
     },
     devtool: "eval-source-map",
     plugins: [
-      new HtmlWebpackPlugin({ template: "./src/index.html" }),
+      new HtmlWebpackPlugin({ template: "./src/index.html", favicon: "./src/favicon.ico" }),
       new MiniCssExtractPlugin(),
       new CleanWebpackPlugin(),
       new webpack.ProgressPlugin(),
