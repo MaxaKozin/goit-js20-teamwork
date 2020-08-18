@@ -1,6 +1,5 @@
-import libraryPage from '../templates/library.hbs'
-import refs from '../services/refs';
-
+import libraryPage from "../templates/library.hbs";
+import refs from "../services/refs";
 
 const MyLibrary = {
   getWatched() {
@@ -19,11 +18,11 @@ const MyLibrary = {
 
   myLibraryMarkUp(data, ref) {
     const markUp = libraryPage(data);
-    ref.insertAdjacentHTML('beforeend', markUp);
+    ref.insertAdjacentHTML("beforeend", markUp);
   },
 
   init() {
-    refs.searchForm.classList.add("none");
+    refs.form.classList.add("none");
     refs.buttonBox.innerHTML = "";
 
     const watchedButton = document.createElement("button");

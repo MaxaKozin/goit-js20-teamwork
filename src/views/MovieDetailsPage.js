@@ -3,11 +3,10 @@ import Pagination from "../components/Pagination";
 import refs from "../services/refs";
 import openedMovie from "../helpers/openedMovie";
 
-
 const detailsPageMarkUp = function (data, target) {
   openedMovie.movie = data;
   const markUp = details(data);
-  refs.searchForm.classList.add("none");
+  refs.form.classList.add("none");
   refs.header.className = "header-detalis";
 
   Pagination.clear();

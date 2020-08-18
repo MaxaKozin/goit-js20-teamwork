@@ -16,7 +16,7 @@ const routing = (page) => {
 
   const loadHomepageContent = (page = 1) => {
     refs.warning.textContent = "";
-    refs.header.className = "home-page"; // me
+    refs.header.className = "home";
     startSpin();
     apiServices
       .fetchRated(page)
@@ -40,7 +40,7 @@ const routing = (page) => {
   const loadLibraryContent = () => {
     Pagination.clear();
     MyLibrary.init();
-    refs.header.className = "my-library"; // me
+    refs.header.className = "my-library";
     stopSpin();
   };
 
