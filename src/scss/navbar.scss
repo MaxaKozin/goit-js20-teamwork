@@ -8,21 +8,18 @@
 }
 
 .home {
-  background: url("./images/header_home_mobile.png"),
-    linear-gradient($overlay, $overlay);
+  background: url("./images/header_home_mobile.png"), linear-gradient($overlay, $overlay);
 }
 
 .my-library {
-  background: url("./images/header_queue_watched_mobile.png"),
-    linear-gradient($overlay, $overlay);
+  background: url("./images/header_queue_watched_mobile.png"), linear-gradient($overlay, $overlay);
   .page__nav {
     padding: 46px 20px;
   }
 }
 
 .header-detalis {
-  background: url("./images/header_details_mobile.png"),
-    linear-gradient($overlay, $overlay);
+  background: url("./images/header_details_mobile.png"), linear-gradient($overlay, $overlay);
 }
 
 .page__nav {
@@ -115,6 +112,7 @@
   line-height: 16px;
   background: transparent;
   text-transform: uppercase;
+  cursor: pointer;
 }
 
 .library__button--active {
@@ -128,21 +126,18 @@
   }
 
   .home {
-    background: url("./images/header_home_tablet.png"),
-      linear-gradient($overlay, $overlay);
+    background: url("./images/header_home_tablet.png"), linear-gradient($overlay, $overlay);
   }
 
   .my-library {
-    background: url("./images/header_queue_watched_tablet.png"),
-      linear-gradient($overlay, $overlay);
+    background: url("./images/header_queue_watched_tablet.png"), linear-gradient($overlay, $overlay);
     .page__nav {
       padding: 46px 74px 42px;
     }
   }
 
   .header-detalis {
-    background: url("./images/header_details_tablet.png"),
-      linear-gradient($overlay, $overlay);
+    background: url("./images/header_details_tablet.png"), linear-gradient($overlay, $overlay);
   }
 
   .home-link {
@@ -168,21 +163,17 @@
 
 @media screen and (min-width: 1024px) {
   .home {
-    background: url("./images/header_home_desktop.png"),
-      linear-gradient($overlay, $overlay);
+    background: url("./images/header_home_desktop.png"), linear-gradient($overlay, $overlay);
   }
   .home-page {
-    background: url("./images/header_home_desktop.png"),
-      linear-gradient($overlay, $overlay);
+    background: url("./images/header_home_desktop.png"), linear-gradient($overlay, $overlay);
   }
 
   .my-library {
-    background: url("./images/header_queue_watched_desktop.png"),
-      linear-gradient($overlay, $overlay);
+    background: url("./images/header_queue_watched_desktop.png"), linear-gradient($overlay, $overlay);
   }
 
   .header-detalis {
-    background: url("./images/header_details_desktop.png"),
-      linear-gradient($overlay, $overlay);
+    background: url("./images/header_details_desktop.png"), linear-gradient($overlay, $overlay);
   }
 }

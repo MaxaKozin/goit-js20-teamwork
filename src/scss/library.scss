@@ -26,6 +26,8 @@
     }
 
     .lbr-movie__info {
+      padding: 0 10px;
+
       .lbr-movie__name {
         font-family: "Roboto Medium";
         text-transform: uppercase;
@@ -150,11 +152,6 @@
       flex-direction: row;
       justify-content: space-between;
 
-      .lbr-movie__img {
-        width: 100%;
-        margin-right: 10px;
-      }
-
       .lbr-movie__info {
         .lbr-movie__name {
           margin-top: 0;
@@ -172,7 +169,14 @@
     grid-gap: 25px;
 
     .lbr-movie-card {
-      width: 420px;
+      width: 425px;
+
+      .lbr-movie__img {
+        width: 212px;
+        object-fit: contain;
+        object-position: top;
+        background: none;
+      }
     }
   }
 }
