@@ -28,17 +28,21 @@
 
     .lbr-movie__info {
       .lbr-movie__name {
+        font-family: "Roboto Medium";
         text-transform: uppercase;
         margin: 0;
         margin-top: 10px;
         font-size: 20px;
       }
       .lbr-movie__date {
+        margin: 0;
+        font-family: "Roboto Medium";
         color: $highlighter;
         margin-bottom: 10px;
       }
 
       .lbr-scores__data {
+        margin: 0;
         margin-bottom: 10px;
 
         display: flex;
@@ -54,10 +58,12 @@
         }
       }
       .lbr-details__data {
+        margin: 0;
         margin-bottom: 10px;
       }
       .movie__genres--list {
         display: flex;
+        margin: 0;
         margin-bottom: 10px;
 
         .genres__item {
