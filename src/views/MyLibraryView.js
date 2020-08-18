@@ -1,14 +1,14 @@
-import libraryPage from '../templates/library.hbs';
-import refs from '../services/refs';
-import onDeleteClick from '../helpers/onDeleteClick';
-import placeholder from '../components/PlaceholderLibraryView';
+import libraryPage from "../templates/library.hbs";
+import refs from "../services/refs";
+import onDeleteClick from "../helpers/onDeleteClick";
+import placeholder from "../components/PlaceholderLibraryView";
 
 const MyLibrary = {
   getWatched() {
     const data = JSON.parse(localStorage.getItem("watched")) || [];
     refs.content.innerHTML = "";
     if (data.length === 0) {
-      placeholder(refs.content, "watched")
+      placeholder(refs.content, "watched");
     }
     this.myLibraryMarkUp(data, refs.content);
     onDeleteClick();
@@ -18,23 +18,23 @@ const MyLibrary = {
     const data = JSON.parse(localStorage.getItem("queue")) || [];
     refs.content.innerHTML = "";
     if (data.length === 0) {
-      placeholder(refs.content, "queue")
+      placeholder(refs.content, "queue");
     }
     this.myLibraryMarkUp(data, refs.content);
     onDeleteClick();
   },
 
   myLibraryMarkUp(data, ref) {
-    const newData = data.map(item => {
-      item.release_date = item.release_date.slice(0, 4)
-      return item
+    const newData = data.map((item) => {
+      item.release_date = item.release_date.slice(0, 4);
+      return item;
     });
     const markUp = libraryPage(newData);
-    ref.insertAdjacentHTML('beforeend', markUp);
+    ref.insertAdjacentHTML("beforeend", markUp);
   },
 
   init() {
-    refs.searchForm.classList.add("none");
+    refs.form.classList.add("none");
     refs.buttonBox.innerHTML = "";
 
     const watchedButton = document.createElement("button");
