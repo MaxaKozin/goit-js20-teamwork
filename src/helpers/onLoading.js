@@ -5,6 +5,7 @@ import homePageMarkUp from '../views/HomePage';
 import { startSpin, stopSpin } from '../components/Spinner/Spinner';
 import refs from '../services/refs';
 import clickListener from "./clickListener";
+import toTopBtn from '../components/toTop';
 
 
 const onLoading = () => {
@@ -19,6 +20,7 @@ const onLoading = () => {
   document.querySelector('#home').classList.add('selected');
   Pagination.init();
   routing(1);
+  toTopBtn();
 
 }
 
