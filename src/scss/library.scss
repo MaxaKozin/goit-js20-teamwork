@@ -6,6 +6,7 @@
   width: 280px;
   margin: 0 auto 50px;
   padding: 0;
+  margin-bottom: 90px;
 
   .lbr-movie-card {
     position: relative;
@@ -114,6 +115,16 @@
   width: 90px;
   color: $categories-text;
   font-size: 12px;
+}
+
+.placeholder__wrapper {
+  margin: 0 auto;
+  text-align: center;
+
+  .lib {
+    text-transform: uppercase;
+    color: $highlighter;
+  }
 }
 
 @media screen and (min-width: 768px) {

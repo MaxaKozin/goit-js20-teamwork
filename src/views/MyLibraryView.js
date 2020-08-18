@@ -1,12 +1,15 @@
-import libraryPage from '../templates/library.hbs'
+import libraryPage from '../templates/library.hbs';
 import refs from '../services/refs';
 import onDeleteClick from '../helpers/onDeleteClick';
-
+import placeholder from '../components/PlaceholderLibraryView';
 
 const MyLibrary = {
   getWatched() {
     const data = JSON.parse(localStorage.getItem("watched")) || [];
     refs.content.innerHTML = "";
+    if (data.length === 0) {
+      placeholder(refs.content, "watched")
+    }
     this.myLibraryMarkUp(data, refs.content);
     onDeleteClick();
   },
@@ -14,6 +17,9 @@ const MyLibrary = {
   getQueue() {
     const data = JSON.parse(localStorage.getItem("queue")) || [];
     refs.content.innerHTML = "";
+    if (data.length === 0) {
+      placeholder(refs.content, "queue")
+    }
     this.myLibraryMarkUp(data, refs.content);
     onDeleteClick();
   },
