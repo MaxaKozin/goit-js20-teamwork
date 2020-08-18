@@ -1,33 +1,29 @@
 #header {
   width: 100%;
-  height: auto;
+  height: 230px;
   position: relative;
 }
 
 .home {
-  background: url("./images/header_home_mobile.png"),
-    linear-gradient($overlay, $overlay);
+  background: url("./images/header_home_mobile.png"), linear-gradient($overlay, $overlay);
   background-size: cover;
   background-repeat: no-repeat;
 }
 
 .home-page {
-  background: url("./images/header_home_mobile.png"),
-    linear-gradient($overlay, $overlay);
+  background: url("./images/header_home_mobile.png"), linear-gradient($overlay, $overlay);
   background-size: cover;
   background-repeat: no-repeat;
 }
 
 .my-library {
-  background: url("./images/header_queue_watched_mobile.png"),
-    linear-gradient($overlay, $overlay);
+  background: url("./images/header_queue_watched_mobile.png"), linear-gradient($overlay, $overlay);
   background-size: cover;
   background-repeat: no-repeat;
 }
 
 .header-detalis {
-  background: url("./images/header_details_mobile.png"),
-    linear-gradient($overlay, $overlay);
+  background: url("./images/header_details_mobile.png"), linear-gradient($overlay, $overlay);
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -85,7 +81,6 @@
   font-size: 0;
 
   &:hover {
-    text-decoration: none;
     color: $header-txt;
   }
 
@@ -93,7 +88,7 @@
     position: absolute;
     content: "";
     display: block;
-    top: -32px;
+    top: -30px;
     left: 20px;
     width: 48px;
     height: 48px;
@@ -137,28 +132,24 @@
   }
 
   .home {
-    background: url("./images/header_home_tablet.png"),
-      linear-gradient($overlay, $overlay);
+    background: url("./images/header_home_tablet.png"), linear-gradient($overlay, $overlay);
     background-size: cover;
     background-repeat: no-repeat;
   }
   .home-page {
-    background: url("./images/header_home_tablet.png"),
-      linear-gradient($overlay, $overlay);
+    background: url("./images/header_home_tablet.png"), linear-gradient($overlay, $overlay);
     background-size: cover;
     background-repeat: no-repeat;
   }
 
   .my-library {
-    background: url("./images/header_queue_watched_tablet.png"),
-      linear-gradient($overlay, $overlay);
+    background: url("./images/header_queue_watched_tablet.png"), linear-gradient($overlay, $overlay);
     background-size: cover;
     background-repeat: no-repeat;
   }
 
   .header-detalis {
-    background: url("./images/header_details_tablet.png"),
-      linear-gradient($overlay, $overlay);
+    background: url("./images/header_details_tablet.png"), linear-gradient($overlay, $overlay);
     background-size: cover;
     background-repeat: no-repeat;
   }
@@ -172,7 +163,7 @@
       padding-left: 40px;
 
       &::before {
-        top: -2px;
+        top: -5px;
         left: 0;
       }
     }
@@ -188,28 +179,24 @@
 
 @media screen and (min-width: 1024px) {
   .home {
-    background: url("./images/header_home_desktop.png"),
-      linear-gradient($overlay, $overlay);
+    background: url("./images/header_home_desktop.png"), linear-gradient($overlay, $overlay);
     background-size: cover;
     background-repeat: no-repeat;
   }
   .home-page {
-    background: url("./images/header_home_desktop.png"),
-      linear-gradient($overlay, $overlay);
+    background: url("./images/header_home_desktop.png"), linear-gradient($overlay, $overlay);
     background-size: cover;
     background-repeat: no-repeat;
   }
 
   .my-library {
-    background: url("./images/header_queue_watched_desktop.png"),
-      linear-gradient($overlay, $overlay);
+    background: url("./images/header_queue_watched_desktop.png"), linear-gradient($overlay, $overlay);
     background-size: cover;
     background-repeat: no-repeat;
   }
 
   .header-detalis {
-    background: url("./images/header_details_desktop.png"),
-      linear-gradient($overlay, $overlay);
+    background: url("./images/header_details_desktop.png"), linear-gradient($overlay, $overlay);
     background-size: cover;
     background-repeat: no-repeat;
   }
