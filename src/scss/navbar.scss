@@ -2,7 +2,6 @@
   width: 100%;
   height: auto;
   position: relative;
-  padding-bottom: 50px;
 }
 
 .home {
@@ -177,13 +176,13 @@
         left: 0;
       }
     }
-    .js-buttons {
-      justify-content: center;
-    }
-    .library__button {
-      width: 140px;
-      margin-right: 20px;
-    }
+  }
+  .js-buttons {
+    justify-content: center;
+  }
+  .library__button {
+    width: 140px;
+    margin-right: 20px;
   }
 }
 
