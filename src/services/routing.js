@@ -6,6 +6,7 @@ import clickListener from "../helpers/clickListener";
 import { startSpin, stopSpin } from "../components/Spinner/Spinner";
 import refs from "../services/refs";
 import onDeleteClick from "../helpers/onDeleteClick";
+import toTopBtn from "../components/toTop";
 
 const routing = (page) => {
   const selectTab = (id) => {
@@ -28,6 +29,7 @@ const routing = (page) => {
       })
       .then(() => stopSpin())
       .catch((error) => console.log(error));
+    toTopBtn();
   };
 
   const pushHomepage = (event, page) => {
@@ -45,6 +47,7 @@ const routing = (page) => {
 
     stopSpin();
     onDeleteClick();
+    toTopBtn();
   };
 
   const pushLibrary = (event) => {
