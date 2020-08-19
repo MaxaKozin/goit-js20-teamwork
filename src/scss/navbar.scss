@@ -1,0 +1,179 @@
+#header {
+  width: 100%;
+  height: 230px;
+  position: relative;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.home {
+  background: url("./images/header_home_mobile.png"), linear-gradient($overlay, $overlay);
+}
+
+.my-library {
+  background: url("./images/header_queue_watched_mobile.png"), linear-gradient($overlay, $overlay);
+  .page__nav {
+    padding: 46px 20px;
+  }
+}
+
+.header-detalis {
+  background: url("./images/header_details_mobile.png"), linear-gradient($overlay, $overlay);
+}
+
+.page__nav {
+  display: flex;
+  align-items: center;
+  padding: 46px 20px 38px;
+}
+
+.route {
+  cursor: pointer;
+  color: $header-txt;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: "Roboto Medium";
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.selected {
+  position: relative;
+
+  &::after {
+    display: block;
+    content: "";
+    position: absolute;
+    background-color: $highlighter;
+    width: 100%;
+    height: 3px;
+    margin: 3px auto 0px;
+  }
+}
+
+#home {
+  margin-right: 42px;
+}
+
+.form {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo {
+  margin: 0;
+  margin-right: auto;
+}
+
+.home-link {
+  cursor: pointer;
+  text-decoration: none;
+  position: relative;
+  font-family: "Roboto Medium";
+  font-size: 0;
+
+  &:hover {
+    color: $header-txt;
+  }
+
+  &::before {
+    position: absolute;
+    content: "";
+    display: block;
+    top: -30px;
+    left: -13px;
+    width: 48px;
+    height: 48px;
+    background-image: url("./images/film.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.6;
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    outline: none;
+  }
+}
+
+.js-buttons {
+  display: flex;
+  justify-content: space-around;
+}
+
+.library__button {
+  width: 130px;
+  height: 44px;
+  border: 1px solid $btn-txt-hover;
+  border-radius: 5px;
+  color: $btn-txt-hover;
+  font-size: 12px;
+  line-height: 16px;
+  background: transparent;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.library__button--active {
+  border: none;
+  outline: none;
+}
+
+@media (min-width: 767px) {
+  .page__nav {
+    padding: 46px 74px 30px;
+  }
+
+  .home {
+    background: url("./images/header_home_tablet.png"), linear-gradient($overlay, $overlay);
+  }
+
+  .my-library {
+    background: url("./images/header_queue_watched_tablet.png"), linear-gradient($overlay, $overlay);
+    .page__nav {
+      padding: 46px 74px 42px;
+    }
+  }
+
+  .header-detalis {
+    background: url("./images/header_details_tablet.png"), linear-gradient($overlay, $overlay);
+  }
+
+  .home-link {
+    font-size: 30px;
+    line-height: 36px;
+    color: $header-txt;
+    padding-left: 40px;
+
+    &::before {
+      top: -5px;
+      left: 0;
+    }
+  }
+
+  .js-buttons {
+    justify-content: center;
+  }
+  .library__button {
+    width: 140px;
+    margin-right: 20px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .home {
+    background: url("./images/header_home_desktop.png"), linear-gradient($overlay, $overlay);
+  }
+  .home-page {
+    background: url("./images/header_home_desktop.png"), linear-gradient($overlay, $overlay);
+  }
+
+  .my-library {
+    background: url("./images/header_queue_watched_desktop.png"), linear-gradient($overlay, $overlay);
+  }
+
+  .header-detalis {
+    background: url("./images/header_details_desktop.png"), linear-gradient($overlay, $overlay);
+  }
+}

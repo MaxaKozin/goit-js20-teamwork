@@ -1,0 +1,66 @@
+.pagination__wrapper {
+  display: flex;
+  min-width: 300px;
+  min-height: 40px;
+  margin: 0 auto;
+  justify-content: center;
+  line-height: 40px;
+  margin-bottom: 60px;
+  font-family: "Roboto Medium";
+  margin-bottom: 90px;
+}
+.arrowLeft {
+  cursor: pointer;
+  margin-right: 10px;
+  min-height: 40px;
+  width: 40px;
+  background-color: #f7f7f7;
+  border-radius: 4px;
+  background-image: url("./images/arrow-left.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.arrowRight {
+  cursor: pointer;
+  margin-right: 10px;
+  width: 40px;
+  min-height: 40px;
+  background-color: #f7f7f7;
+  border-radius: 4px;
+  background-image: url("./images/arrow-right.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.pagNumber {
+  cursor: pointer;
+  margin-right: 15px;
+  line-height: 1px;
+  font-size: 12px;
+}
+
+.pagDots {
+  display: inline;
+  line-height: 10px;
+  vertical-align: 50%;
+  margin-right: 15px;
+}
+
+.current {
+  display: inline;
+  background-color: $highlighter;
+  color: #fff;
+  margin-right: 15px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 5px;
+}
+
+@media (max-width: 768px) {
+  .pagDots {
+    display: none;
+  }
+}

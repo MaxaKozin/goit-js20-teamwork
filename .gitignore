@@ -1,0 +1,17 @@
+# production
+dist/
+
+# Logs
+logs
+*.log
+npm-debug.log*
+build/
+
+# Dependency directories
+node_modules/
+
+
+.npm
+.eslintcache
+.DS_Store
+

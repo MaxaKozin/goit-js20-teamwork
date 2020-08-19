@@ -1,0 +1,43 @@
+.totop_btn {
+  transition: all 0.2s linear;
+  position: fixed;
+  bottom: 95px;
+  right: 0;
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  margin: 0 25px 25px;
+  border-radius: 50%;
+  padding: 4px;
+  width: 60px;
+  height: 60px;
+  background: none;
+  z-index: 222;
+
+  &.show {
+    visibility: visible;
+    opacity: 0.75;
+  }
+
+  &.hide {
+    visibility: hidden;
+    opacity: 0;
+  }
+
+  &:hover > svg {
+    fill: darken($color: $highlighter, $amount: 10%);
+  }
+
+  svg {
+    fill: $highlighter;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .totop_btn {
+    bottom: 55px;
+  }
+}

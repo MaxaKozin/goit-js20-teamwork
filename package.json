@@ -1,0 +1,60 @@
+{
+  "name": "goit-js20-project",
+  "version": "1.0.0",
+  "description": "boilerplate",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack --mode production",
+    "start": "webpack-dev-server --mode development",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
+  },
+  "author": "Yaroslav Kuzero",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.11.1",
+    "@babel/preset-env": "^7.11.0",
+    "axios": "^0.19.2",
+    "babel-loader": "^8.1.0",
+    "clean-webpack-plugin": "^3.0.0",
+    "css-loader": "^4.2.1",
+    "eslint": "^7.6.0",
+    "file-loader": "^6.0.0",
+    "gh-pages": "^3.1.0",
+    "handlebars": "^4.7.6",
+    "handlebars-loader": "^1.7.1",
+    "html-webpack-plugin": "^4.3.0",
+    "imagemin-webpack-plugin": "^2.4.2",
+    "mini-css-extract-plugin": "^0.10.0",
+    "mini-svg-data-uri": "^1.2.3",
+    "optimize-css-assets-webpack-plugin": "^5.0.3",
+    "sass": "^1.26.10",
+    "sass-loader": "^9.0.3",
+    "style-loader": "^1.2.1",
+    "throttle-debounce": "^2.2.1",
+    "url-loader": "^4.1.0",
+    "webpack": "^4.44.1",
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "^3.11.0"
+  },
+  "dependencies": {
+    "friendly-errors-webpack-plugin": "^1.7.0",
+    "img-loader": "^3.0.1",
+    "pagination": "github:mayuska/pagination",
+    "spin.js": "^4.1.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MaxaKozin/goit-js20-teamwork.git"
+  },
+  "keywords": [
+    "GoIT",
+    "JS20",
+    "project"
+  ],
+  "bugs": {
+    "url": "https://github.com/MaxaKozin/goit-js20-teamwork/issues"
+  },
+  "homepage": "https://github.com/MaxaKozin/goit-js20-teamwork#readme"
+}
