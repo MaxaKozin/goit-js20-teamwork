@@ -1,10 +1,10 @@
   <div class="details" data-id={{id}}>
     <div class="details__img-container">
-        <img
-        src="https://image.tmdb.org/t/p/original{{poster_path}}"
-        alt="{{title}}"
-        class="details__img"
-      ></img>
+      {{#if poster_path}}
+    <img class="details__img" src="https://image.tmdb.org/t/p/original{{poster_path}}" alt="{{title}}" />
+    {{else}}
+    <img class="details__img" src="https://dummyimage.com/400x600/cfcfcf/ffffff&text=NO+IMAGE+AVAILABLE" alt="{{title}}" />
+    {{/if}}
     </div>
      
     <div class="details__information">

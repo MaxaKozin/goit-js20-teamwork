@@ -1,7 +1,11 @@
 <ul class="library-movies">
 {{#each this}}
 <li class="lbr-movie-card" data-id={{id}} >
-    <img class="lbr-movie__img" src="https://image.tmdb.org/t/p/original{{poster_path}}" alt="{{title}}"/>
+    {{#if poster_path}}
+    <img class="lbr-movie__img" src="https://image.tmdb.org/t/p/original{{poster_path}}" alt="{{title}}" />
+    {{else}}
+    <img class="lbr-movie__img" src="https://dummyimage.com/400x600/cfcfcf/ffffff&text=NO+IMAGE+AVAILABLE" alt="{{title}}" />
+    {{/if}}
     <div class="lbr-movie__info">
       <p class="lbr-movie__name">{{title}} </p>
       <p class="lbr-movie__date"> | {{release_date}}</p>

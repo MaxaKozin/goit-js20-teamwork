@@ -1,8 +1,12 @@
 <ul class="movie">
 {{#each this}}
-<li class="movie-card">
+<li class="movie-card"  >
   <div class="movie-link">
-    <img class="movie-img" src="https://image.tmdb.org/t/p/original{{poster_path}}" alt="{{title}}" data-id={{id}} />
+    {{#if poster_path}}
+    <img data-id={{id}} class="movie-img" src="https://image.tmdb.org/t/p/original{{poster_path}}" alt="{{title}}" />
+    {{else}}
+    <img data-id={{id}} class="movie-img" src="https://dummyimage.com/400x600/cfcfcf/ffffff&text=NO+IMAGE+AVAILABLE" alt="{{title}}" />
+    {{/if}}
     <p class="movie-name">{{title}} </p>
     <div class="movie__box">
       <p class="movie-details">
