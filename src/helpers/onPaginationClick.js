@@ -10,7 +10,7 @@ const onPaginationClick = (page) => {
   apiServices
     .fetchRated(page)
     .then((data) => {
-      homePageMarkUp(data, refs.content)
+      homePageMarkUp(data, refs.content);
     }).then(() => clickListener()).then(() => stopSpin())
     .catch((error) => console.log(error));
 }
