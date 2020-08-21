@@ -8,19 +8,6 @@ const Pagination = {
   init() {
     apiServices.fetchRatedData().then(data => this.items = data.total_pages).then(() => {
       const paginationWrapper = document.createElement('div');
-      //   const htmlMarkup =
-      //     `<a class="arrowLeft">&#9668;</a>
-      // <span>
-      //   <a class="pagNumber current">1</a>
-      //     <i class="pagDots">...</i>
-      //     <a class="pagNumber">5</a>
-      //     <a class="pagNumber">6</a>
-      //     <a class="pagNumber">7</a>
-      //     <i class="pagDots">...</i>
-      //     <a class="pagNumber">n</a>
-      // </span>
-      // <a class="arrowRight">&#9658;</a>`;
-      // paginationWrapper.innerHTML = htmlMarkup;
       paginationWrapper.classList.add('pagination__wrapper');
       refs.pagination.append(paginationWrapper);
 
